@@ -1,9 +1,9 @@
 <?php
 
 $servername = "127.0.0.1";
-$database = "node1";
-$username = "root";
-$password = "5fd5ab27";
+$database = "maus_radar";
+$username = "maus_radar";
+$password = "UuMoyT^e]ax^";
 // Create a connection
 
 
