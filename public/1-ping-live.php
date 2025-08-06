@@ -43,7 +43,7 @@ function mernajson(){
         
             $.ajax({
                 type: "GET",
-                url: 'https://node1.ir/1-ping-live-func.php?ip='+ipbox,
+                url: 'https://radar.maus.ir/1-ping-live-func.php?ip='+ipbox,
                 dataType: "json",
                 async:false,
                 cache:false,
