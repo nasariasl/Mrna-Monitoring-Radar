@@ -89,10 +89,6 @@ $post_result=base64_encode(serialize($result));
 
 $FileContents = file_get_contents("https://radar.maus.ir/nodes-healt-check.php?post_result=".$post_result);
 
-//echo 'das bin ich'; echo '
-//
-<hr>';
-//echo time();
 
 $output = ob_get_contents();
 $file = 'run_log.txt';
