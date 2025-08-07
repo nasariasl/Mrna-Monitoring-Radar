@@ -312,7 +312,7 @@
                 height: 100%;
                 z-index: 9999;
                 background-size: 200px 100px;
-                background: url('https://www.node1.ir/{{ URL::asset(' assets/Darman_Automation_Loading.gif') }}') 50% 50% no-repeat;
+                background: url('./assets/Darman_Automation_Loading.gif') 50% 50% no-repeat;
                 backdrop-filter: blur(10px);
                 background-size: 150px;
             }
@@ -323,9 +323,9 @@
 
     </footer>
     <!-- Bootstrap core JS-->
-    <script src="{{ URL::asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="{{ URL::asset('js/scripts.js') }}"></script>
+    <script src="./js/scripts.js"></script>
 </body>
 
 </html>
