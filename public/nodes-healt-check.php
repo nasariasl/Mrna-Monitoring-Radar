@@ -2,7 +2,7 @@
 //save
 include('../sql.php');
 
-//get node IP
+//get node IP From Header -> Not used anymore since 2025/AUG
 if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
     $ip = $_SERVER['HTTP_CLIENT_IP'];
 } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
@@ -26,7 +26,13 @@ if (isset($_GET['title']) && !empty($_GET['title'])) {
         $user = "NAN";
     }
 
-
+// Get ip from Static Value
+    if (isset($_GET['$node_ip']) && !empty($_GET['$node_ip'])) {
+        $ip = $_GET['$node_ip'];
+    } else {
+        $ip = "192.168.1.1";
+    }
+	
     // Create a connection
     $conn = mysqli_connect($servername, $username, $password, $database);
 
