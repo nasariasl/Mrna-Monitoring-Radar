@@ -27,7 +27,7 @@ if (isset($_GET['title']) && !empty($_GET['title'])) {
     }
 
 // Get ip from Static Value
-    if (isset($_GET['$node_ip']) && !empty($_GET['$node_ip'])) {
+    if (isset($_GET['node_ip']) && !empty($_GET['node_ip'])) {
         $ip = $_GET['$node_ip'];
     } else {
         $ip = "192.168.1.1";
