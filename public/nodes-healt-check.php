@@ -3,13 +3,13 @@
 include('../sql.php');
 
 //get node IP From Header -> Not used anymore since 2025/AUG
- if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-    $ip = $_SERVER['HTTP_CLIENT_IP'];
-} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-} else {
-    $ip = $_SERVER['REMOTE_ADDR'];
-}
+// if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+//    $ip = $_SERVER['HTTP_CLIENT_IP'];
+//} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+//    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+//} else {
+//    $ip = $_SERVER['REMOTE_ADDR'];
+//}
 
 
 if (isset($_GET['title']) && !empty($_GET['title'])) {
