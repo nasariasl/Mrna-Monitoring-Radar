@@ -80,34 +80,34 @@
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="mernabody">
 
 
-                <div class="col mb-5" onclick="mernaloadbody('1-ping-list.php');">
-                    <div class="card">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="./assets/Ping.png" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">آزمایش پینگ</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- <div class="col mb-5" onclick="mernaloadbody('1-ping-list.php');"> -->
+                <!-- <div class="card"> -->
+                <!-- Product image-->
+                <!-- <img class="card-img-top" src="./assets/Ping.png" alt="..." /> -->
+                <!-- Product details-->
+                <!-- <div class="card-body p-4"> -->
+                <!-- <div class="text-center"> -->
+                <!-- Product name-->
+                <!-- <h5 class="fw-bolder">آزمایش پینگ</h5> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <!-- </div> -->
 
 
-                <div class="col mb-5" onclick="mernaload('2-mrt.php');">
-                    <div class="card">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="./assets/MRT.png" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">آزمایش Trace Route</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- <div class="col mb-5" onclick="mernaload('2-mrt.php');"> -->
+                <!-- <div class="card"> -->
+                <!-- Product image-->
+                <!-- <img class="card-img-top" src="./assets/MRT.png" alt="..." /> -->
+                <!-- Product details-->
+                <!-- <div class="card-body p-4"> -->
+                <!-- <div class="text-center"> -->
+                <!-- Product name-->
+                <!-- <h5 class="fw-bolder">آزمایش Trace Route</h5> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <!-- </div> -->
 
                 <!--<div class="col mb-5" onclick="mernaload('3-radar.php');">-->
                 <!--    <div class="card">-->
