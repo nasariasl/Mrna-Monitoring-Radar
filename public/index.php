@@ -142,6 +142,13 @@
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            mernaload_loop_click('3-radar-v2.php', 'tracker_v');
+        });
+    </script>
+
     <script>
 
         //$("#box").animate({ scrollTop: $('#box').prop("scrollHeight")}, 1000);
