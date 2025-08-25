@@ -93,7 +93,25 @@ $result[$element['url']]= '-1';
 
 $post_result=base64_encode(serialize($result));
 
-$FileContents = file_get_contents("https://radar.maus.ir/nodes-healt-check.php?post_result=".$post_result);
+
+$url = "https://radar.maus.ir/nodes-healt-check.php?post_result=" . $post_result;
+
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+$response = curl_exec($ch);
+
+if (curl_errno($ch)) {
+    echo "Curl Error: " . curl_error($ch);
+}
+
+curl_close($ch);
+
+echo $response;
+
 
 
 $output = ob_get_contents();
