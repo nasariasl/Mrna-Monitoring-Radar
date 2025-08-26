@@ -134,9 +134,17 @@ if (isset($_GET['post_result']) && !empty($_GET['post_result'])) {
 
         //echo "Connected successfully";
         $sql = "INSERT IGNORE INTO   urls_tracker (srv,url,status,time) VALUES ('$ip','$key','$element','$time') ";
-        $result = $conn->query($sql);
+		// اجرای کوئری
+		if ($conn->query($sql)) {
+			// موفقیت‌آمیز بود
+			// echo "Record inserted successfully";
+		} else {
+			// خطا رخ داده
+			echo "MySQL Error: " . $conn->error . "\n";
+			echo "SQL Query: " . $sql . "\n";
+		}
     }
-echo "Data has been saved";
+
 }
 
 ?>
