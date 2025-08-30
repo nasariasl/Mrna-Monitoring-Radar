@@ -21,17 +21,10 @@
             font-style: normal;
             font-display: swap;
         }
-		@media screen and (min-width: 1024px) {
-		  html {
-			transform: scale(0.3);
-			transform-origin: top left;
-			width: 333.33%; /* 100 / 0.3 = 333.33% */
-			height: 333.33%;
-			overflow-x: hidden; /* جلوگیری از اسکرول افقی */
-			overflow-y: auto; /* برای حفظ اسکرول عمودی */
-		  }
-		}
         body {
+			zoom: 3; 
+			-moz-transform: scale(3); 
+			-moz-transform-origin: 0 0;
 			overflow-x: hidden;
             direction: rtl;
             font-family: Vazirmatn UI;
