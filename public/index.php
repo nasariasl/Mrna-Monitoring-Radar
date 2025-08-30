@@ -22,7 +22,12 @@
             font-style: normal;
             font-display: swap;
         }
-
+		html {
+		  transform: scale(0.3);
+		  transform-origin: top left; /* برای اینکه زوم از گوشه بالا سمت چپ شروع بشه */
+		  width: 333.33%; /* برای جبران فضای خالی ایجاد شده */
+		  height: 333.33%;
+		}
         body {
             direction: rtl;
             font-family: Vazirmatn UI;
