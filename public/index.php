@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title> پنجره خدمات مانیتورینگ تحت وب </title>
@@ -42,7 +42,7 @@
     </style>
 </head>
 
-<body style="transform: scale(0.5); transform-origin: 0 0;">
+<body>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #051103;">
         <div class="container px-4 px-lg-5">
