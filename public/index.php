@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.3">
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title> پنجره خدمات مانیتورینگ تحت وب </title>
@@ -22,11 +22,13 @@
             font-style: normal;
             font-display: swap;
         }
-		html {
-		  transform: scale(0.3);
-		  transform-origin: top left; /* برای اینکه زوم از گوشه بالا سمت چپ شروع بشه */
-		  width: 333.33%; /* برای جبران فضای خالی ایجاد شده */
-		  height: 333.33%;
+		@media screen and (min-width: 1024px) {
+		  html {
+			transform: scale(0.3);
+			transform-origin: top left;
+			width: 333.33%;
+			height: 333.33%;
+		  }
 		}
         body {
             direction: rtl;
