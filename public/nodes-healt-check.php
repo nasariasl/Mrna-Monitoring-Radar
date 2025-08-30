@@ -87,7 +87,7 @@ print_r($result);
 //$post_result=base64_encode(serialize($result));
 $post_result = base64_encode(json_encode($result));
 
-$url = "https://radar.maus.ir/nodes-healt-check.php?post_result=" . $post_result;
+$url = "https://radar.maus.ir/nodes-healt-check.php?post_result=" . $post_result."&node_ip=" . urlencode($node_ip);
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
