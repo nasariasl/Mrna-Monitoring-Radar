@@ -30,6 +30,7 @@
 		  }
 		}
         body {
+			overflow-x: hidden;
             direction: rtl;
             font-family: Vazirmatn UI;
         }
