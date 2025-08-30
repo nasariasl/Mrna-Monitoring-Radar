@@ -25,8 +25,10 @@
 		  html {
 			transform: scale(0.3);
 			transform-origin: top left;
-			width: 333.33%;
+			width: 333.33%; /* 100 / 0.3 = 333.33% */
 			height: 333.33%;
+			overflow-x: hidden; /* جلوگیری از اسکرول افقی */
+			overflow-y: auto; /* برای حفظ اسکرول عمودی */
 		  }
 		}
         body {
