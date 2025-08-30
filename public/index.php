@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="viewport" content="width=device-width, initial-scale=0.3">
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title> پنجره خدمات مانیتورینگ تحت وب </title>
