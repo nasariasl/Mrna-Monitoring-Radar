@@ -136,7 +136,9 @@ if (isset($_GET['post_result']) && !empty($_GET['post_result'])) {
     foreach ($array as $key => $element) {
 
         //echo "Connected successfully";
-        $sql = "INSERT IGNORE INTO   urls_tracker (srv,url,status,time) VALUES ('$ip','$key','$element','$time') ";
+        //$sql = "INSERT IGNORE INTO   urls_tracker (srv,url,status,time) VALUES ('$ip','$key','$element','$time') ";
+		$sql = "INSERT INTO urls_tracker (srv,url,status,time) VALUES ('$ip','$key','$element','$time')";
+
 		// اجرای کوئری
 		if ($conn->query($sql)) {
 			// موفقیت‌آمیز بود
