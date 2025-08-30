@@ -130,6 +130,8 @@
                 <!--    </div>-->
                 <!--</div>-->
 
+				<div id="box"> </div>
+				
                 <div class="col mb-5" id="tracker_v" onclick="mernaload_loop_click('3-radar-v2.php','tracker_v');">
                     <div class="card">
                         <!-- Product image-->
@@ -307,9 +309,6 @@
             //var timeout = setInterval(reloadChat, 7000);
         });
     </script>
-
-
-    <div id="box"> </div>
 
 
     <!-- Footer-->
