@@ -22,9 +22,17 @@
             font-display: swap;
         }
         body {
-			zoom: 3; 
-			-moz-transform: scale(3); 
-			-moz-transform-origin: 0 0;
+    /* Zoom برای مرورگرهای Webkit (Chrome, Edge, Opera, Safari) و IE */
+    zoom: 0.3; /* 30% */
+
+    /* Scale برای مرورگرهای دیگر مثل Firefox */
+    transform: scale(0.3);
+    transform-origin: top left;
+
+    /* جلوگیری از overflow اضافی */
+    width: 333%;  /* 1 / 0.3 */
+    height: 333%; /* 1 / 0.3 */
+    overflow: hidden; 
 			overflow-x: hidden;
             direction: rtl;
             font-family: Vazirmatn UI;
