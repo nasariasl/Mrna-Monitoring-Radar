@@ -42,7 +42,7 @@
     </style>
 </head>
 
-<body>
+<body style="transform: scale(0.5); transform-origin: 0 0;">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #051103;">
         <div class="container px-4 px-lg-5">
