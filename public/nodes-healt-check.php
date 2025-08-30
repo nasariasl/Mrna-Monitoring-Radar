@@ -114,6 +114,14 @@ file_put_contents($file, $message);
 
 <?php
 
+    // Get ip from Static Value
+	 $ip ='';
+    if (isset($_GET['node_ip']) && !empty($_GET['node_ip'])) {
+        $ip = $_GET['node_ip'];
+    } else {
+        $ip = "192.168.1.1";
+    }
+
 if (isset($_GET['post_result']) && !empty($_GET['post_result'])) {
 
     //$array = unserialize(base64_decode($_GET["post_result"]));
