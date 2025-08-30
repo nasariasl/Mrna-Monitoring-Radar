@@ -71,7 +71,7 @@ if (isset($_GET['title']) && !empty($_GET['title'])) {
 
 //echo $urls = '<?php echo serialize($row); ?>';
 //$urls_array = unserialize($urls);
-echo $urls = '<?php echo json_encode($row); ?>';
+$urls = '<?php echo json_encode($row); ?>';
 $urls_array = json_decode($urls, true);
 
 //print_r($test);
@@ -91,7 +91,7 @@ $result[$element['url']]= '-1';
 
 }
 
-//print_r($result);
+print_r($result);
 
 //$post_result=base64_encode(serialize($result));
 $post_result = base64_encode(json_encode($result));
