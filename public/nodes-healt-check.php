@@ -69,8 +69,10 @@ if (isset($_GET['title']) && !empty($_GET['title'])) {
 ?>
 
 
-echo $urls = '<?php echo serialize($row); ?>';
-$urls_array = unserialize($urls);
+//echo $urls = '<?php echo serialize($row); ?>';
+//$urls_array = unserialize($urls);
+echo $urls = '<?php echo json_encode($row); ?>';
+$urls_array = json_decode($urls, true);
 
 //print_r($test);
 
@@ -91,8 +93,8 @@ $result[$element['url']]= '-1';
 
 //print_r($result);
 
-$post_result=base64_encode(serialize($result));
-
+//$post_result=base64_encode(serialize($result));
+$post_result = base64_encode(json_encode($result));
 
 $url = "https://radar.maus.ir/nodes-healt-check.php?post_result=" . $post_result;
 
@@ -123,8 +125,9 @@ file_put_contents($file, $message);
 
 if (isset($_GET['post_result']) && !empty($_GET['post_result'])) {
 
-    $array = unserialize(base64_decode($_GET["post_result"]));
-
+    //$array = unserialize(base64_decode($_GET["post_result"]));
+	$array = json_decode(base64_decode($_GET["post_result"]), true);
+	
     // Create a connection
     $conn = mysqli_connect($servername, $username, $password, $database);
 
