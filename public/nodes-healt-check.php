@@ -141,6 +141,7 @@ if (isset($_GET['post_result']) && !empty($_GET['post_result'])) {
 		if ($conn->query($sql)) {
 			// موفقیت‌آمیز بود
 		    echo "Record inserted successfully";
+			print_r($array);
 		} else {
 			// خطا رخ داده
 			echo "MySQL Error: " . $conn->error . "\n";
