@@ -121,7 +121,7 @@ $row = $result->fetch_all(MYSQLI_ASSOC);
           <th scope="col">سرور <?php echo $srv_element['title']; ?></th>
           <?php
 
-          $sql = "SELECT time FROM urls_tracker where srv='$ip' GROUP BY  time ORDER BY id  DESC limit 120";
+          $sql = "SELECT time FROM urls_tracker where srv='$ip' GROUP BY  time ORDER BY id  DESC limit 150";
           $result = $conn->query($sql);
           // Associative array
           $column = $result->fetch_all(MYSQLI_ASSOC);
@@ -140,7 +140,7 @@ $row = $result->fetch_all(MYSQLI_ASSOC);
 
           $url_id = $element['id'];
           $url = $element['url'];
-          $sql = "SELECT status FROM urls_tracker where url='$url' AND srv='$ip'  ORDER BY id  DESC limit 120";
+          $sql = "SELECT status FROM urls_tracker where url='$url' AND srv='$ip'  ORDER BY id  DESC limit 150";
           $result = $conn->query($sql);
           // Associative array
           $column = $result->fetch_all(MYSQLI_ASSOC);
