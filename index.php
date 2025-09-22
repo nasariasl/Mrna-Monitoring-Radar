@@ -41,19 +41,16 @@
             background-size: cover;
         }
 		
-		/* فقط روی متن‌ها اثر بذار */
 		h1, h2, h3, h4, h5, h6,
-		p, span, a, strong, em,
-		th, td, label {
-			transition: transform 0.2s ease, color 0.2s ease;
+		p, span, a, th, td, label {
+			transition: transform 0.2s ease;
+			transform-origin: center; /* بزرگ شدن از وسط */
 		}
 
-		/* وقتی موس روی متن رفت */
+		/* هنگام hover */
 		h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,
-		p:hover, span:hover, a:hover, strong:hover, em:hover,
-		th:hover, td:hover, label:hover {
-			transform: scale(1.7); /* بزرگ‌نمایی فقط متن */
-			color: #ffd700; /* تغییر رنگ (اختیاری) */
+		p:hover, span:hover, a:hover, th:hover, td:hover, label:hover {
+			transform: scale(1.2);
 		}
     </style>
 </head>
