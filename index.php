@@ -50,7 +50,7 @@
 		/* هنگام hover */
 		h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,
 		p:hover, span:hover, a:hover, th:hover, td:hover, label:hover {
-			transform: scale(1.2);
+			transform: scale(1.9);
 		}
     </style>
 </head>
