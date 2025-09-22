@@ -47,7 +47,7 @@
     <!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #051103;">
 		<div class="container px-4 px-lg-5">
-			<a class="navbar-brand ms-auto" href="">پنجره خدمات مانیتورینگ تحت وب</a>
+			<a class="navbar-brand ms-auto" dir="rtl" href="">پنجره خدمات مانیتورینگ تحت وب</a>
 		</div>
 	</nav>
 	
