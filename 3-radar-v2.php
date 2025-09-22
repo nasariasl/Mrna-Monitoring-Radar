@@ -3,7 +3,7 @@
 include('jdf.php');
 
 //sql
-include('../sql.php');
+include('sql.php');
 
 // Create a connection
 $conn = mysqli_connect($servername, $username, $password, $database);
