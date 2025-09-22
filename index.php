@@ -48,85 +48,14 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #051103;">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href=""> پنجره خدمات مانیتورینگ تحت وب</a>
-            <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>-->
-            <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-            <!--    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">-->
-            <!--        <li class="nav-item"><a class="nav-link active" aria-current="page" href="">صفحه اصلی</a></li>-->
-            <!--        <li class="nav-item"><a class="nav-link" href="#!">درباره ما</a></li>-->
-            <!--        <li class="nav-item dropdown">-->
-            <!--            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">T1</a>-->
-            <!--            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-            <!--                <li><a class="dropdown-item" href="#!">All</a></li>-->
-            <!--                <li><hr class="dropdown-divider" /></li>-->
-            <!--                <li><a class="dropdown-item" href="#!">A1</a></li>-->
-            <!--                <li><a class="dropdown-item" href="#!">A2</a></li>-->
-            <!--            </ul>-->
-            <!--        </li>-->
-            <!--    </ul>-->
-            <!--</div>-->
         </div>
     </nav>
-    <!-- Header-->
-    <!--<header class="py-5 mena-header">-->
-    <!--    <div class="container px-4 px-lg-5 my-5" >-->
-    <!--        <div class="text-center text-white">-->
-    <!--            <h1 class="display-4 fw-bolder">ناخدا صفر و یک</h1>-->
-    <!--            <p class="lead fw-normal text-white-50 mb-0">سرویس مانیتورینگ و تست صفحات</p>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</header>-->
-    <!-- Section-->
 	
 	<div id="box"> </div>
 	
     <section class="py-5 mrna-section">
         <div class="container px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="mernabody">
-
-
-                <!-- <div class="col mb-5" onclick="mernaloadbody('1-ping-list.php');"> -->
-                <!-- <div class="card"> -->
-                <!-- Product image-->
-                <!-- <img class="card-img-top" src="./assets/Ping.png" alt="..." /> -->
-                <!-- Product details-->
-                <!-- <div class="card-body p-4"> -->
-                <!-- <div class="text-center"> -->
-                <!-- Product name-->
-                <!-- <h5 class="fw-bolder">آزمایش پینگ</h5> -->
-                <!-- </div> -->
-                <!-- </div> -->
-                <!-- </div> -->
-                <!-- </div> -->
-
-
-                <!-- <div class="col mb-5" onclick="mernaload('2-mrt.php');"> -->
-                <!-- <div class="card"> -->
-                <!-- Product image-->
-                <!-- <img class="card-img-top" src="./assets/MRT.png" alt="..." /> -->
-                <!-- Product details-->
-                <!-- <div class="card-body p-4"> -->
-                <!-- <div class="text-center"> -->
-                <!-- Product name-->
-                <!-- <h5 class="fw-bolder">آزمایش Trace Route</h5> -->
-                <!-- </div> -->
-                <!-- </div> -->
-                <!-- </div> -->
-                <!-- </div> -->
-
-                <!--<div class="col mb-5" onclick="mernaload('3-radar.php');">-->
-                <!--    <div class="card">-->
-                <!-- Product image-->
-                <!--        <img class="card-img-top" src="{{ URL::asset('assets/Tracker.png') }}" alt="..." />-->
-                <!-- Product details-->
-                <!--        <div class="card-body p-4">-->
-                <!--            <div class="text-center">-->
-                <!-- Product name-->
-                <!--                <h5 class="fw-bolder">Tracker</h5>-->
-                <!--            </div>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
-
 
                 <div class="col mb-5" id="tracker_v" onclick="mernaload_loop_click('3-radar-v2.php','tracker_v');">
                     <div class="card">
