@@ -1,6 +1,6 @@
 <?php
 //save
-include('../sql.php');
+include('sql.php');
 
 if (isset($_GET['title']) && !empty($_GET['title'])) {
 
