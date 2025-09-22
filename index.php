@@ -52,7 +52,7 @@
 		h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,
 		p:hover, span:hover, a:hover, strong:hover, em:hover,
 		th:hover, td:hover, label:hover {
-			transform: scale(1.2); /* بزرگ‌نمایی فقط متن */
+			transform: scale(3.3); /* بزرگ‌نمایی فقط متن */
 			color: #ffd700; /* تغییر رنگ (اختیاری) */
 		}
     </style>
