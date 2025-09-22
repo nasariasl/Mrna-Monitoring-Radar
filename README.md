@@ -15,5 +15,3 @@ Web Availability Tracker/Radar to monitor websites/IPs downtime and uptime
 ## Demo
 
  * [Demo Version ](https://radar.maus.ir)
-
-## Getting started
