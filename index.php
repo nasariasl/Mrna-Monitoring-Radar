@@ -40,13 +40,15 @@
             background-image: url("http://static.colourlovers.com/images/patterns/1631/1631873.png?1340389562") background-attachment: fixed;
             background-size: cover;
         }
-	.navbar-brand {
-        transition: transform 0.2s ease, color 0.2s ease;
-    }
-    .navbar-brand:hover {
-        transform: scale(5); /* بزرگ‌تر شدن نوشته */
-        color: #ffd700;        /* می‌تونی رنگ هم عوض کنی (اختیاری) */
-    }
+		/* برای همه متن‌ها */
+		body * {
+			transition: transform 0.2s ease, color 0.2s ease;
+		}
+
+		/* وقتی موس روی هر نوشته بره */
+		body *:hover {
+			transform: scale(4.5);
+		}
     </style>
 </head>
 
