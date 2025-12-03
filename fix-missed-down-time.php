@@ -4,7 +4,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 $conn->set_charset("utf8");
 
 // زمان ۲ دقیقه قبل
-$time_limit = time() - 120;
+$time_limit = time() - 300;
 
 // گرفتن سرورها
 $servers = [];
