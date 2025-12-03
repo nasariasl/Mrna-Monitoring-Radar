@@ -7,6 +7,9 @@ $conn->set_charset("utf8");
 // زمان ۲ دقیقه قبل
 $time_limit = time() - 120;
 
+// آرایه گزارش رکوردهای درج شده
+$inserted = [];
+
 // گرفتن لیست سرورها
 $servers = [];
 $res = mysqli_query($conn, "SELECT ip FROM maral_srv_list WHERE yz = 1");
@@ -44,13 +47,34 @@ foreach ($servers as $srv) {
     mysqli_stmt_fetch($checkStmt);
     mysqli_stmt_free_result($checkStmt);
 
-    // اگر هیچ رکوردی نبود → insert
+    // اگر رکوردی نبود → insert
     if ($count == 0) {
+
       $now = time();
       mysqli_stmt_bind_param($insertStmt, "ssi", $srv, $url, $now);
-      mysqli_stmt_execute($insertStmt);
+      $ok = mysqli_stmt_execute($insertStmt);
+
+      // اگر درج موفق بود → ذخیره در آرایه گزارش
+      if ($ok) {
+        $inserted[] = [
+          'srv' => $srv,
+          'url' => $url,
+          'time' => date("Y-m-d H:i:s", $now)
+        ];
+      }
     }
   }
 }
 
-echo "OK - Missing records inserted.";
+// -----------------------------
+// چاپ گزارش در انتهای فایل
+// -----------------------------
+
+echo "<pre>";
+if (empty($inserted)) {
+  echo "هیچ رکوردی درج نشد.\n";
+} else {
+  echo "رکوردهای درج شده:\n";
+  print_r($inserted);
+}
+echo "</pre>";
