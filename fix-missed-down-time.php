@@ -1,5 +1,4 @@
 <?php
-// اتصال به دیتابیس
 include('sql.php');
 $conn = mysqli_connect($servername, $username, $password, $database);
 $conn->set_charset("utf8");
@@ -7,10 +6,7 @@ $conn->set_charset("utf8");
 // زمان ۲ دقیقه قبل
 $time_limit = time() - 120;
 
-// آرایه گزارش رکوردهای درج شده
-$inserted = [];
-
-// گرفتن لیست سرورها
+// گرفتن سرورها
 $servers = [];
 $res = mysqli_query($conn, "SELECT ip FROM maral_srv_list WHERE yz = 1");
 while ($row = mysqli_fetch_assoc($res)) {
@@ -24,51 +20,55 @@ while ($row = mysqli_fetch_assoc($res)) {
   $urls[] = $row['url'];
 }
 
-// آماده کردن statement برای چک
-$checkStmt = mysqli_prepare(
-  $conn,
-  "SELECT COUNT(*) FROM urls_tracker WHERE srv = ? AND url = ? AND time > ?"
-);
+// ------------------------------
+// مرحله 1: گرفتن تمام رکوردهای 2 دقیقه اخیر فقط با یک کوئری
+// ------------------------------
 
-// آماده کردن statement برای insert
-$insertStmt = mysqli_prepare(
-  $conn,
-  "INSERT INTO urls_tracker (srv, url, status, time) VALUES (?, ?, -1, ?)"
-);
+$recent = []; // ساختار: $recent[srv][url] = true;
 
-// Loop روی هر سرور و هر URL
+$q = mysqli_query($conn, "
+    SELECT srv, url 
+    FROM urls_tracker 
+    WHERE time > $time_limit
+");
+
+while ($row = mysqli_fetch_assoc($q)) {
+  $recent[$row['srv']][$row['url']] = true;
+}
+
+// ------------------------------
+// مرحله 2: پیدا کردن موارد missing در PHP
+// ------------------------------
+
+$inserted = [];
+$now = time();
+
 foreach ($servers as $srv) {
   foreach ($urls as $url) {
 
-    // bind برای چک
-    mysqli_stmt_bind_param($checkStmt, "ssi", $srv, $url, $time_limit);
-    mysqli_stmt_execute($checkStmt);
-    mysqli_stmt_bind_result($checkStmt, $count);
-    mysqli_stmt_fetch($checkStmt);
-    mysqli_stmt_free_result($checkStmt);
+    // اگر در لیست recent نیست → یعنی رکورد ندارد
+    if (!isset($recent[$srv][$url])) {
 
-    // اگر رکوردی نبود → insert
-    if ($count == 0) {
+      // درج رکورد -1
+      mysqli_query(
+        $conn,
+        "INSERT INTO urls_tracker (srv, url, status, time)
+                 VALUES ('$srv', '$url', -1, $now)"
+      );
 
-      $now = time();
-      mysqli_stmt_bind_param($insertStmt, "ssi", $srv, $url, $now);
-      $ok = mysqli_stmt_execute($insertStmt);
-
-      // اگر درج موفق بود → ذخیره در آرایه گزارش
-      if ($ok) {
-        $inserted[] = [
-          'srv' => $srv,
-          'url' => $url,
-          'time' => date("Y-m-d H:i:s", $now)
-        ];
-      }
+      // ذخیره گزارش
+      $inserted[] = [
+        'srv' => $srv,
+        'url' => $url,
+        'time' => date("Y-m-d H:i:s", $now)
+      ];
     }
   }
 }
 
-// -----------------------------
-// چاپ گزارش در انتهای فایل
-// -----------------------------
+// ------------------------------
+// مرحله 3: چاپ گزارش
+// ------------------------------
 
 echo "<pre>";
 if (empty($inserted)) {
